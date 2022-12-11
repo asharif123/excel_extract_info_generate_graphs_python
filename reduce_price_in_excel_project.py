@@ -19,8 +19,9 @@ def process_workbook(filename):
     for row in range(2, sheet.max_row+1):
         cell = sheet.cell(row, 3)
         corrected_price = cell.value * 0.9
-        ##access fourth column to put corrected values
+        ##access fourth column from rows 2 to 4 to put corrected values
         corrected_price_cell = sheet.cell(row,4)
+        ##add the corrected values to the 4th column
         corrected_price_cell.value = corrected_price
 
     ##select values in 4th column ONLY and create chart
